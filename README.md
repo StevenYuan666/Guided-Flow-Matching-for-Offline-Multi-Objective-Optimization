@@ -6,7 +6,7 @@ We refer most of following steps to the README of the [offline MOO benchmark](ht
 
 ### Create a Virtual Environment
 ```bash
-conda create -n gfmo python=3.12
+conda create -n gfmo python=3.8
 conda activate gfmo
 conda install gxx_linux-64 gcc_linux-64
 conda install --channel=conda-forge libxcrypt

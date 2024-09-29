@@ -546,9 +546,14 @@ class FlowMatching(nn.Module):
         return unique_solutions
 
     @classmethod
-    def get_N_non_dominated_solutions(cls, res_x, res_y, N):
-        fronts = NonDominatedSorting().do(res_y)
-        N_best_indices = get_N_nondominated_indices(Y=res_y, num_ret=N, fronts=fronts)
+    def get_N_non_dominated_solutions(cls, res_x, res_y, N, classifiers):
+        predicted_scores = []
+        with torch.no_grad():
+            for classifier in classifiers:
+                predicted_scores.append(-1 * classifier(res_x))
+        predicted_res_y = torch.stack(predicted_scores, dim=1).squeeze()
+        fronts = NonDominatedSorting().do(predicted_res_y)
+        N_best_indices = get_N_nondominated_indices(Y=predicted_res_y, num_ret=N, fronts=fronts)
         return res_x[N_best_indices], res_y[N_best_indices]
         
         
@@ -820,7 +825,7 @@ class FlowMatching(nn.Module):
         res_x = temp_pareto_set
         res_y = task.predict(res_x)
         # Do a non-dominated sorting to get the pareto set
-        res_x, res_y = FlowMatching.get_N_non_dominated_solutions(res_x, res_y, num_solutions)
+        res_x, res_y = FlowMatching.get_N_non_dominated_solutions(res_x, res_y, num_solutions, classifiers)
         # Transpose if necessary
         if res_y.shape[0] != res_x.shape[0]:
             res_y = res_y.T
