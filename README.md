@@ -55,3 +55,9 @@ mkdir ${YOUR_PATH_TO_CONDA}/envs/off-moo/include/GL
 sudo cp /usr/include/X11/*.h ${YOUR_PATH_TO_CONDA}/envs/off-moo/include/X11/
 sudo cp /usr/include/GL/*.h ${YOUR_PATH_TO_CONDA}/envs/off-moo/include/GL 
 ```
+
+## Run Experiments
+```bash
+conda activate gfmo
+bash scripts/gfmo_all_exps.sh
+```
