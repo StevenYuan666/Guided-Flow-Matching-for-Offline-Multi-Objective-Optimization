@@ -82,7 +82,6 @@ def train_proxies(args):
 
 
 def train_flow_matching(args):
-    # TODO: Only try continuous task for now
     # Set the seed
     set_seed(args.seed)
 
@@ -355,10 +354,6 @@ def evaluation(args):
     res_x = np.load(args.samples_store_path + name + "_x.npy")
     res_y = np.load(args.samples_store_path + name + "_y.npy")
     print(f"Loaded the generated samples from {args.samples_store_path}")
-
-    # TODO: Add a filtering to keep fm_num_solutions solutions
-    if args.fm_num_solutions is not None and args.fm_num_solutions < len(res_x):
-        pass
 
     visible_masks = np.ones(len(res_y))
     visible_masks[np.where(np.logical_or(np.isinf(res_y), np.isnan(res_y)))[0]] = 0

@@ -76,7 +76,7 @@ for seed in $seeds; do
         check_jobs
         gpu_allocation=$(get_gpu_allocation $job_number)
         ((job_number++))
-        run_with_retry "/home/admin1/Documents/GFMO-Guided-Flow-Matching-for-Offline-Multi-Objective-Optimization/offline_moo/off_moo_baselines/multiple_models/experiment.py \
+        run_with_retry "offline_moo/off_moo_baselines/multiple_models/experiment.py \
             --model=${model} \
             --train_mode=${train_mode} \
             --task=${task} \
