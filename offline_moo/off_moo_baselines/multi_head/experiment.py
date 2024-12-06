@@ -18,8 +18,9 @@ from offline_moo.off_moo_baselines.data import get_dataloader, tkwargs
 from offline_moo.off_moo_baselines.mo_solver.callback import RecordCallback
 from offline_moo.off_moo_baselines.mo_solver.moea_solver import MOEASolver
 from offline_moo.off_moo_baselines.multi_head.nets import MultiHeadModel
-from offline_moo.off_moo_baselines.multi_head.surrogate_problem import \
-    MultiHeadSurrogateProblem
+from offline_moo.off_moo_baselines.multi_head.surrogate_problem import (
+    MultiHeadSurrogateProblem,
+)
 from offline_moo.off_moo_baselines.multi_head.trainer import get_trainer
 from offline_moo.off_moo_bench.collecter import get_operator_dict
 from offline_moo.off_moo_bench.evaluation.metrics import hv

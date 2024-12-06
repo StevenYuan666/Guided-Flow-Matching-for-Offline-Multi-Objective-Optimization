@@ -1,11 +1,11 @@
 import numpy as np
 import torch
+
 # from gpytorch.lazy import BatchRepeatLazyTensor
 from botorch.models import SingleTaskGP
 from botorch.posteriors import GPyTorchPosterior
 from gpytorch import settings
-from gpytorch.distributions import (MultitaskMultivariateNormal,
-                                    MultivariateNormal)
+from gpytorch.distributions import MultitaskMultivariateNormal, MultivariateNormal
 from gpytorch.likelihoods import FixedNoiseGaussianLikelihood
 from gpytorch.mlls import ExactMarginalLogLikelihood
 from lambo import dataset as dataset_util

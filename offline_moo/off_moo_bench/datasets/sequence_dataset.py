@@ -38,6 +38,9 @@ class SequenceDataset(DatasetBuilder):
         self.soft_interpolation = 0.6
         self.num_classes_on_each_dim = None
 
+    # We should not use this property, because the number of classes is given by the task xu, i.e., the upperbound
+    # See task.py line 126 - line 129
+
     # @property
     # def num_classes_on_each_dim(self):
     #     count = {}

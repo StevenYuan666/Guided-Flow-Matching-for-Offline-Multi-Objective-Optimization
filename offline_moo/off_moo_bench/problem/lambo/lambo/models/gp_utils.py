@@ -1,5 +1,6 @@
 import copy
 import logging
+
 # import wandb
 import math
 
@@ -14,8 +15,7 @@ from lambo.models.lanmt import lanmt_eval_epoch, lanmt_train_step
 from lambo.models.lm_elements import LanguageModel
 from lambo.models.mlm import mlm_eval_epoch, mlm_train_step
 from lambo.models.shared_elements import check_early_stopping
-from lambo.utils import (batched_call, draw_bootstrap, to_tensor,
-                         weighted_resampling)
+from lambo.utils import batched_call, draw_bootstrap, to_tensor, weighted_resampling
 from torch.nn.modules.batchnorm import _BatchNorm
 from torch.utils.data import DataLoader
 

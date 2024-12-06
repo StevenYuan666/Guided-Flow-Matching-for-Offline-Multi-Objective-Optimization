@@ -2,8 +2,7 @@ import abc
 
 import numpy as np
 import torch
-from botorch.models import (KroneckerMultiTaskGP, SingleTaskGP,
-                            SingleTaskVariationalGP)
+from botorch.models import KroneckerMultiTaskGP, SingleTaskGP, SingleTaskVariationalGP
 from gpytorch import kernels, likelihoods
 from gpytorch.mlls import ExactMarginalLogLikelihood, VariationalELBO
 from gpytorch.utils.memoize import clear_cache_hook

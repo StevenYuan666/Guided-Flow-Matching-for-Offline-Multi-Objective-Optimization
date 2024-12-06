@@ -6,9 +6,14 @@ import torch.multiprocessing
 import torch.optim as optim
 from sample import Sample
 from scipy.optimize import least_squares
-from utils import (compute_hypervolume, compute_sparsity,
-                   generate_weights_batch_dfs, get_ep_indices, update_ep,
-                   update_ep_and_compute_hypervolume_sparsity)
+from utils import (
+    compute_hypervolume,
+    compute_sparsity,
+    generate_weights_batch_dfs,
+    get_ep_indices,
+    update_ep,
+    update_ep_and_compute_hypervolume_sparsity,
+)
 
 torch.multiprocessing.set_sharing_strategy("file_system")
 from hypervolume import InnerHyperVolume

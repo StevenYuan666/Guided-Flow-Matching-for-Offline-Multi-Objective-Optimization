@@ -9,8 +9,12 @@ import gym
 import numpy as np
 import tensorflow as tf
 from baselines import logger
-from baselines.common.cmd_util import (common_arg_parser, make_env,
-                                       make_vec_env, parse_unknown_args)
+from baselines.common.cmd_util import (
+    common_arg_parser,
+    make_env,
+    make_vec_env,
+    parse_unknown_args,
+)
 from baselines.common.tf_util import get_session
 from baselines.common.vec_env import VecEnv, VecFrameStack, VecNormalize
 from baselines.common.vec_env.vec_video_recorder import VecVideoRecorder

@@ -19,8 +19,7 @@ from rdkit.Chem import AllChem
 from torch.utils.data import DataLoader
 from tqdm.auto import tqdm
 
-from .hgraph2graph.hgraph import (HierVAE, MoleculeDataset, PairVocab,
-                                  common_atom_vocab)
+from .hgraph2graph.hgraph import HierVAE, MoleculeDataset, PairVocab, common_atom_vocab
 
 param_norm = lambda m: math.sqrt(sum([p.norm().item() ** 2 for p in m.parameters()]))
 grad_norm = lambda m: math.sqrt(

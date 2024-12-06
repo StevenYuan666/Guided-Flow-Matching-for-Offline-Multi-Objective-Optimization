@@ -3,6 +3,7 @@ from functools import reduce
 
 import numpy as np
 import tensorflow as tf
+
 # flake8: noqa F403, F405
 from baselines.acktr.kfac_utils import *
 

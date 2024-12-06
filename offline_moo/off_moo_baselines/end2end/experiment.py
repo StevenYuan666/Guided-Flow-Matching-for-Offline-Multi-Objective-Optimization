@@ -16,8 +16,9 @@ from utils import get_quantile_solutions, set_seed
 import offline_moo.off_moo_bench as ob
 from offline_moo.off_moo_baselines.data import get_dataloader, tkwargs
 from offline_moo.off_moo_baselines.end2end.nets import End2EndModel
-from offline_moo.off_moo_baselines.end2end.surrogate_problem import \
-    End2EndSurrogateProblem
+from offline_moo.off_moo_baselines.end2end.surrogate_problem import (
+    End2EndSurrogateProblem,
+)
 from offline_moo.off_moo_baselines.end2end.trainer import get_trainer
 from offline_moo.off_moo_baselines.mo_solver.callback import RecordCallback
 from offline_moo.off_moo_baselines.mo_solver.moea_solver import MOEASolver

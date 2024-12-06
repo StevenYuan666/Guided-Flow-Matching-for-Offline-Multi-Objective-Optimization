@@ -1,7 +1,6 @@
 import pickle
 
-from offline_moo.off_moo_bench.datasets.continuous_dataset import \
-    ContinuousDataset
+from offline_moo.off_moo_bench.datasets.continuous_dataset import ContinuousDataset
 from offline_moo.off_moo_bench.disk_resource import DiskResource
 
 MO_SWIMMER_V2_FILES = ["mo_swimmer_v2/mo_swimmer_v2-x-0.npy"]

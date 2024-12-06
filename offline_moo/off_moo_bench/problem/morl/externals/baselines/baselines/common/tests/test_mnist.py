@@ -1,5 +1,6 @@
 import pytest
 from baselines.common.tests import mark_slow
+
 # from baselines.acer import acer_simple as acer
 from baselines.common.tests.envs.mnist_env import MnistEnv
 from baselines.common.tests.util import simple_test

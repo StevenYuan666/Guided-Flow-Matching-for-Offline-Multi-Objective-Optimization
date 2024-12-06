@@ -12,20 +12,23 @@ from botorch.models.gp_regression import SingleTaskGP
 from botorch.models.model_list_gp_regression import ModelListGP
 from botorch.optim.optimize import optimize_acqf_list
 from botorch.sampling.normal import SobolQMCNormalSampler
-from botorch.utils.multi_objective.scalarization import \
-    get_chebyshev_scalarization
+from botorch.utils.multi_objective.scalarization import get_chebyshev_scalarization
 from botorch.utils.sampling import sample_simplex
 from botorch.utils.transforms import normalize, unnormalize
 from gpytorch.mlls.sum_marginal_log_likelihood import (
-    ExactMarginalLogLikelihood, SumMarginalLogLikelihood)
+    ExactMarginalLogLikelihood,
+    SumMarginalLogLikelihood,
+)
 from numpy import ndarray
 from pymoo.algorithms.soo.nonconvex.ga import GA
 from pymoo.optimize import minimize
 from torch import Tensor
 from utils import get_N_nondominated_index
 
-from offline_moo.off_moo_baselines.mobo.kernel import (OrderKernel,
-                                                       TransformedCategorical)
+from offline_moo.off_moo_baselines.mobo.kernel import (
+    OrderKernel,
+    TransformedCategorical,
+)
 from offline_moo.off_moo_baselines.mobo.mobo_utils import tkwargs
 from offline_moo.off_moo_baselines.mobo.surrogate_problem import AcqfProblem
 from offline_moo.off_moo_bench.collecter import get_operator_dict

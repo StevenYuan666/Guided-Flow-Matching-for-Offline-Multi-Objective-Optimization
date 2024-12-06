@@ -626,8 +626,7 @@ class RoMATrainer(SingleModelBaseTrainer):
         )
         self.sol_x_opt = Adam([self.sol_x], lr=config["sol_x_opt_lr"])
 
-        from offline_moo.off_moo_baselines.multiple_models.nets import \
-            RoMAModel
+        from offline_moo.off_moo_baselines.multiple_models.nets import RoMAModel
 
         self.temp_model = RoMAModel(
             n_dim=self.model.n_dim,
@@ -944,8 +943,9 @@ class TriMentoringTrainer(SingleModelBaseTrainer):
     ):
         from utils import set_seed
 
-        from offline_moo.off_moo_baselines.multiple_models.external.tri_mentoring_utils import \
-            adjust_learning_rate
+        from offline_moo.off_moo_baselines.multiple_models.external.tri_mentoring_utils import (
+            adjust_learning_rate,
+        )
 
         set_seed(model.seed)
 
@@ -1100,8 +1100,9 @@ class TriMentoringTrainer(SingleModelBaseTrainer):
         self.min_mse = float("inf")
         statistics = {}
 
-        from offline_moo.off_moo_baselines.multiple_models.external.tri_mentoring_utils import \
-            adjust_proxy
+        from offline_moo.off_moo_baselines.multiple_models.external.tri_mentoring_utils import (
+            adjust_proxy,
+        )
 
         for model in self.model.models:
             self.train_single_model(model, train_loader, val_loader, test_loader)

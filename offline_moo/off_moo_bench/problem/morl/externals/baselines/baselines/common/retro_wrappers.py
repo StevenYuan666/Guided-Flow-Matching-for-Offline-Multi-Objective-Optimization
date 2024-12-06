@@ -6,8 +6,7 @@ cv2.ocl.setUseOpenCL(False)
 import gym
 import numpy as np
 
-from .atari_wrappers import (ClipRewardEnv, FrameStack, ScaledFloatFrame,
-                             WarpFrame)
+from .atari_wrappers import ClipRewardEnv, FrameStack, ScaledFloatFrame, WarpFrame
 from .wrappers import TimeLimit
 
 

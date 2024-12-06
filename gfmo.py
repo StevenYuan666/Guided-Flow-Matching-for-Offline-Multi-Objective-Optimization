@@ -3,8 +3,7 @@ import os
 from time import time
 
 from gfmo_args import parse_args
-from gfmo_experiments import (evaluation, sampling, train_flow_matching,
-                              train_proxies)
+from gfmo_experiments import evaluation, sampling, train_flow_matching, train_proxies
 
 
 def main(args):

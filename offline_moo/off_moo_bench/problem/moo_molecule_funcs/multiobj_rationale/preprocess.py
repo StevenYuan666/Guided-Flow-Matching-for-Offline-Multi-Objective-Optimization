@@ -9,8 +9,7 @@ from multiprocessing import Pool
 import numpy
 import rdkit
 import torch
-from fuseprop import (MolGraph, common_atom_vocab, dual_random_subgraph,
-                      random_subgraph)
+from fuseprop import MolGraph, common_atom_vocab, dual_random_subgraph, random_subgraph
 from rdkit import Chem
 
 

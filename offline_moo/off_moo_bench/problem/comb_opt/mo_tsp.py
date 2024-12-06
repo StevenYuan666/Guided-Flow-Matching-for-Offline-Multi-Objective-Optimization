@@ -7,8 +7,7 @@ from pymoo.core.repair import Repair
 
 from offline_moo.off_moo_bench.problem.base import BaseProblem
 
-from .MOTSProblemDef import (augment_xy_data_by_64_fold_2obj,
-                             get_random_problems)
+from .MOTSProblemDef import augment_xy_data_by_64_fold_2obj, get_random_problems
 
 
 class StartFromZeroRepair(Repair):

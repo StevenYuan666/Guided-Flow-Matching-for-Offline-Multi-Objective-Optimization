@@ -1,8 +1,12 @@
 import functools
 
 import tensorflow as tf
-from baselines.common.tf_util import (get_session, initialize, load_variables,
-                                      save_variables)
+from baselines.common.tf_util import (
+    get_session,
+    initialize,
+    load_variables,
+    save_variables,
+)
 
 try:
     from baselines.common.mpi_adam_optimizer import MpiAdamOptimizer

@@ -8,9 +8,16 @@ from torch.utils.data import DataLoader
 import offline_moo.off_moo_bench as ob
 from gfmo_args import parse_args
 from gfmo_nets import FlowMatching, VectorFieldNet
-from gfmo_utils import (ALLTASKSDICT, DesignDataset, MultipleModels,
-                        SingleModel, SingleModelBaseTrainer, get_dataloader,
-                        tkwargs, training)
+from gfmo_utils import (
+    ALLTASKSDICT,
+    DesignDataset,
+    MultipleModels,
+    SingleModel,
+    SingleModelBaseTrainer,
+    get_dataloader,
+    tkwargs,
+    training,
+)
 from offline_moo.off_moo_bench.evaluation.metrics import hv
 from offline_moo.utils import get_quantile_solutions, set_seed
 
@@ -228,15 +235,7 @@ def sampling(args):
         + "_"
         + f"gamma={args.fm_gamma}"
     )
-    model_name = (
-        args.fm_prob_path
-        + "_"
-        + str(1000)
-        + "_"
-        + task_name
-        + "_"
-        + str(0)
-    )
+    model_name = args.fm_prob_path + "_" + str(1000) + "_" + task_name + "_" + str(0)
     model_store_dir = args.fm_store_path
 
     # Load the best model

@@ -21,8 +21,7 @@ def SyntheticFunction(
     from ray.tune import run
 
     from offline_moo.off_moo_baselines.multiple import multiple_run
-    from offline_moo.off_moo_bench.task_set import \
-        SyntheticFunction as tasks_to_run
+    from offline_moo.off_moo_bench.task_set import SyntheticFunction as tasks_to_run
 
     if len(tasks) == 0:
         tasks = tasks_to_run
@@ -197,8 +196,7 @@ def MONASSequence(
     from ray.tune import run
 
     from offline_moo.off_moo_baselines.multiple import multiple_run
-    from offline_moo.off_moo_bench.task_set import \
-        MONASSequence as tasks_to_run
+    from offline_moo.off_moo_bench.task_set import MONASSequence as tasks_to_run
 
     if len(tasks) == 0:
         tasks = tasks_to_run
@@ -372,8 +370,7 @@ def MOCOPermutation(
     from ray.tune import run
 
     from offline_moo.off_moo_baselines.multiple import multiple_run
-    from offline_moo.off_moo_bench.task_set import \
-        MOCOPermutation as tasks_to_run
+    from offline_moo.off_moo_bench.task_set import MOCOPermutation as tasks_to_run
 
     if len(tasks) == 0:
         tasks = tasks_to_run
@@ -460,8 +457,7 @@ def MOCOContinuous(
     from ray.tune import run
 
     from offline_moo.off_moo_baselines.multiple import multiple_run
-    from offline_moo.off_moo_bench.task_set import \
-        MOCOContinuous as tasks_to_run
+    from offline_moo.off_moo_bench.task_set import MOCOContinuous as tasks_to_run
 
     if len(tasks) == 0:
         tasks = tasks_to_run
@@ -635,8 +631,9 @@ def ScientificDesignContinuous(
     from ray.tune import run
 
     from offline_moo.off_moo_baselines.multiple import multiple_run
-    from offline_moo.off_moo_bench.task_set import \
-        ScientificDesignContinuous as tasks_to_run
+    from offline_moo.off_moo_bench.task_set import (
+        ScientificDesignContinuous as tasks_to_run,
+    )
 
     if len(tasks) == 0:
         tasks = tasks_to_run
@@ -723,8 +720,9 @@ def ScientificDesignSequence(
     from ray.tune import run
 
     from offline_moo.off_moo_baselines.multiple import multiple_run
-    from offline_moo.off_moo_bench.task_set import \
-        ScientificDesignSequence as tasks_to_run
+    from offline_moo.off_moo_bench.task_set import (
+        ScientificDesignSequence as tasks_to_run,
+    )
 
     if len(tasks) == 0:
         tasks = tasks_to_run

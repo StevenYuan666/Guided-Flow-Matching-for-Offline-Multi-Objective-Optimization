@@ -121,13 +121,11 @@ class Task(object):
                 is_absolute=False,
                 disk_target=name,
             )
-        
 
         if isinstance(self.dataset, SequenceDataset):
             # Change to numpy int
             classes = self.xu.astype(int) + 1
             self.dataset.num_classes_on_each_dim = classes.tolist()
-
 
     @property
     def is_discrete(self):

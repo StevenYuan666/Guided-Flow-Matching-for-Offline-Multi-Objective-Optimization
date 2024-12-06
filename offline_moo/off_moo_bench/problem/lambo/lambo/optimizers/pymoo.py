@@ -8,8 +8,7 @@ import torch
 from botorch.utils.multi_objective import infer_reference_point, pareto
 from lambo.models.lm_elements import LanguageModel
 from lambo.tasks.surrogate_task import SurrogateTask
-from lambo.utils import (DataSplit, safe_np_cat, update_splits,
-                         weighted_resampling)
+from lambo.utils import DataSplit, safe_np_cat, update_splits, weighted_resampling
 from pymoo.factory import get_performance_indicator, get_termination
 from pymoo.optimize import minimize
 

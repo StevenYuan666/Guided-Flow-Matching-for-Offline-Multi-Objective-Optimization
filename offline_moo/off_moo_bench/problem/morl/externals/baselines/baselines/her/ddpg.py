@@ -7,9 +7,13 @@ from baselines.common import tf_util
 from baselines.common.mpi_adam import MpiAdam
 from baselines.her.normalizer import Normalizer
 from baselines.her.replay_buffer import ReplayBuffer
-from baselines.her.util import (convert_episode_to_batch_major, flatten_grads,
-                                import_function, store_args,
-                                transitions_in_episode_batch)
+from baselines.her.util import (
+    convert_episode_to_batch_major,
+    flatten_grads,
+    import_function,
+    store_args,
+    transitions_in_episode_batch,
+)
 from tensorflow.contrib.staging import StagingArea
 
 

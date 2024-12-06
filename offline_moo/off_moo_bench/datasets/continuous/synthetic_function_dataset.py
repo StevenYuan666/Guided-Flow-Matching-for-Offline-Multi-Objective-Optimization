@@ -1,5 +1,4 @@
-from offline_moo.off_moo_bench.datasets.continuous_dataset import \
-    ContinuousDataset
+from offline_moo.off_moo_bench.datasets.continuous_dataset import ContinuousDataset
 from offline_moo.off_moo_bench.disk_resource import DiskResource
 
 SyntheticFuncNames = [

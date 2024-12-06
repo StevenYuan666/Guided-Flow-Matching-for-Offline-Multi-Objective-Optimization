@@ -3,8 +3,12 @@ import math
 import typing
 
 import torch
-from lambo.models.lm_elements import (FunctionHead, LengthHead,
-                                      LengthTransform, PositionalEncoding)
+from lambo.models.lm_elements import (
+    FunctionHead,
+    LengthHead,
+    LengthTransform,
+    PositionalEncoding,
+)
 from lambo.models.masked_layers import Apply, mResidualBlock
 from torch import nn as nn
 

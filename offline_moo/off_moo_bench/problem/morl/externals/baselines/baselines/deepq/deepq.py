@@ -9,8 +9,7 @@ import tensorflow as tf
 from baselines import deepq, logger
 from baselines.common import set_global_seeds
 from baselines.common.schedules import LinearSchedule
-from baselines.common.tf_util import (get_session, load_variables,
-                                      save_variables)
+from baselines.common.tf_util import get_session, load_variables, save_variables
 from baselines.deepq.models import build_q_func
 from baselines.deepq.replay_buffer import PrioritizedReplayBuffer, ReplayBuffer
 from baselines.deepq.utils import ObservationInput

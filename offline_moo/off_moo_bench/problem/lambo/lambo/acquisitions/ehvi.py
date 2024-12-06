@@ -2,10 +2,12 @@ import torch
 from botorch.models import KroneckerMultiTaskGP
 from botorch.sampling import IIDNormalSampler
 from botorch.utils.multi_objective import infer_reference_point
-from botorch.utils.multi_objective.box_decompositions import \
-    NondominatedPartitioning
-from lambo.acquisitions.monte_carlo import (qDiscreteEHVI, qDiscreteNEHVI,
-                                            qMTGPDiscreteNEHVI)
+from botorch.utils.multi_objective.box_decompositions import NondominatedPartitioning
+from lambo.acquisitions.monte_carlo import (
+    qDiscreteEHVI,
+    qDiscreteNEHVI,
+    qMTGPDiscreteNEHVI,
+)
 from lambo.utils import batched_call
 
 

@@ -10,8 +10,11 @@ from baselines.common import set_global_seeds
 from baselines.ddpg.ddpg_learner import DDPG
 from baselines.ddpg.memory import Memory
 from baselines.ddpg.models import Actor, Critic
-from baselines.ddpg.noise import (AdaptiveParamNoiseSpec, NormalActionNoise,
-                                  OrnsteinUhlenbeckActionNoise)
+from baselines.ddpg.noise import (
+    AdaptiveParamNoiseSpec,
+    NormalActionNoise,
+    OrnsteinUhlenbeckActionNoise,
+)
 
 try:
     from mpi4py import MPI

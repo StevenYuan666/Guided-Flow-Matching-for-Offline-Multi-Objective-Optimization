@@ -1,5 +1,9 @@
-from lambo.candidate import (StringCandidate, StringDeletion, StringInsertion,
-                             StringSubstitution)
+from lambo.candidate import (
+    StringCandidate,
+    StringDeletion,
+    StringInsertion,
+    StringSubstitution,
+)
 from lambo.utils import IntTokenizer, mutation_list
 
 

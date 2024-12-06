@@ -5,24 +5,21 @@ base_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..")
 sys.path.append(base_path)
 
 import numpy as np
-from pymoo.algorithms.moo.nsga2 import (RankAndCrowdingSurvival,
-                                        calc_crowding_distance)
+from pymoo.algorithms.moo.nsga2 import RankAndCrowdingSurvival, calc_crowding_distance
 from pymoo.core.evaluator import Evaluator
 from pymoo.core.repair import Repair
 from pymoo.factory import get_crossover
 from pymoo.operators.crossover.ox import OrderCrossover
 from pymoo.operators.mutation.inversion import InversionMutation
-from pymoo.operators.sampling.rnd import (FloatRandomSampling,
-                                          PermutationRandomSampling)
+from pymoo.operators.sampling.rnd import FloatRandomSampling, PermutationRandomSampling
 from pymoo.util.randomized_argsort import randomized_argsort
 
 from offline_moo.off_moo_bench.problem import get_problem
-from offline_moo.off_moo_bench.problem.comb_opt.mo_portfolio import \
-    PortfolioRepair
-from offline_moo.off_moo_bench.problem.lambo.lambo.optimizers.mutation import \
-    LocalMutation
-from offline_moo.off_moo_bench.problem.lambo.lambo.utils import \
-    ResidueTokenizer
+from offline_moo.off_moo_bench.problem.comb_opt.mo_portfolio import PortfolioRepair
+from offline_moo.off_moo_bench.problem.lambo.lambo.optimizers.mutation import (
+    LocalMutation,
+)
+from offline_moo.off_moo_bench.problem.lambo.lambo.utils import ResidueTokenizer
 
 load_evoxbench = True
 try:

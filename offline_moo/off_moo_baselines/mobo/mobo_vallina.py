@@ -6,26 +6,32 @@ import gpytorch
 import numpy as np
 import torch
 from botorch import fit_gpytorch_mll
-from botorch.acquisition.multi_objective.monte_carlo import \
-    qNoisyExpectedHypervolumeImprovement
+from botorch.acquisition.multi_objective.monte_carlo import (
+    qNoisyExpectedHypervolumeImprovement,
+)
 from botorch.models import FixedNoiseGP
 from botorch.models.gp_regression import SingleTaskGP
 from botorch.models.model_list_gp_regression import ModelListGP
 from botorch.optim.optimize import optimize_acqf
 from botorch.sampling.normal import SobolQMCNormalSampler
-from botorch.utils.multi_objective.box_decompositions.non_dominated import \
-    FastNondominatedPartitioning
+from botorch.utils.multi_objective.box_decompositions.non_dominated import (
+    FastNondominatedPartitioning,
+)
 from botorch.utils.transforms import normalize, unnormalize
 from gpytorch.mlls.sum_marginal_log_likelihood import (
-    ExactMarginalLogLikelihood, SumMarginalLogLikelihood)
+    ExactMarginalLogLikelihood,
+    SumMarginalLogLikelihood,
+)
 from numpy import ndarray
 from pymoo.algorithms.moo.nsga2 import NSGA2
 from pymoo.optimize import minimize
 from torch import Tensor
 from utils import get_N_nondominated_index
 
-from offline_moo.off_moo_baselines.mobo.kernel import (OrderKernel,
-                                                       TransformedCategorical)
+from offline_moo.off_moo_baselines.mobo.kernel import (
+    OrderKernel,
+    TransformedCategorical,
+)
 from offline_moo.off_moo_baselines.mobo.mobo_utils import tkwargs
 from offline_moo.off_moo_baselines.mobo.surrogate_problem import LCB_Problem
 from offline_moo.off_moo_bench.collecter import get_operator_dict

@@ -20,8 +20,9 @@ from offline_moo.off_moo_baselines.data import get_dataloader, tkwargs
 from offline_moo.off_moo_baselines.mo_solver.callback import RecordCallback
 from offline_moo.off_moo_baselines.mo_solver.moea_solver import MOEASolver
 from offline_moo.off_moo_baselines.multiple_models.nets import MultipleModels
-from offline_moo.off_moo_baselines.multiple_models.surrogate_problem import \
-    MultipleSurrogateProblem
+from offline_moo.off_moo_baselines.multiple_models.surrogate_problem import (
+    MultipleSurrogateProblem,
+)
 from offline_moo.off_moo_baselines.multiple_models.trainer import get_trainer
 from offline_moo.off_moo_bench.collecter import get_operator_dict
 from offline_moo.off_moo_bench.evaluation.metrics import hv

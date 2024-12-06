@@ -3,16 +3,18 @@ from typing import Tuple
 import numpy as np
 import torch
 from botorch import fit_gpytorch_mll
-from botorch.acquisition.multi_objective.joint_entropy_search import \
-    qLowerBoundMultiObjectiveJointEntropySearch
+from botorch.acquisition.multi_objective.joint_entropy_search import (
+    qLowerBoundMultiObjectiveJointEntropySearch,
+)
 from botorch.acquisition.multi_objective.utils import (
-    compute_sample_box_decomposition, random_search_optimizer,
-    sample_optimal_points)
+    compute_sample_box_decomposition,
+    random_search_optimizer,
+    sample_optimal_points,
+)
 from botorch.models.gp_regression import SingleTaskGP
 from botorch.optim.optimize import optimize_acqf
 from botorch.utils.transforms import normalize, unnormalize
-from gpytorch.mlls.sum_marginal_log_likelihood import \
-    ExactMarginalLogLikelihood
+from gpytorch.mlls.sum_marginal_log_likelihood import ExactMarginalLogLikelihood
 from numpy import ndarray
 from torch import Tensor
 from utils import get_N_nondominated_index

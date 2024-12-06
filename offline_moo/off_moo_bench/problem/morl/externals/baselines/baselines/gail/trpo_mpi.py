@@ -11,8 +11,7 @@ import baselines.common.tf_util as U
 import numpy as np
 import tensorflow as tf
 from baselines import logger
-from baselines.common import (colorize, dataset, explained_variance, fmt_row,
-                              zipsame)
+from baselines.common import colorize, dataset, explained_variance, fmt_row, zipsame
 from baselines.common.cg import cg
 from baselines.common.mpi_adam import MpiAdam
 from baselines.gail.statistics import stats

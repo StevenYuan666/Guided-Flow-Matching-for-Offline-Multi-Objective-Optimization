@@ -2,13 +2,20 @@ import math
 import os
 
 import numpy as np
+
 # from evoxbench.benchmarks import NASBench201Benchmark
 # from evoxbench.test_suites import c10mop
 # from evoxbench.test_suites import in1kmop
-from evoxbench.benchmarks import (DARTSBenchmark, MobileNetV3Benchmark,
-                                  NASBench101Benchmark, NASBench201Benchmark,
-                                  NATSBenchmark, ResNet50DBenchmark,
-                                  TransformerBenchmark)
+from evoxbench.benchmarks import (
+    DARTSBenchmark,
+    MobileNetV3Benchmark,
+    NASBench101Benchmark,
+    NASBench201Benchmark,
+    NATSBenchmark,
+    ResNet50DBenchmark,
+    TransformerBenchmark,
+)
+
 # from pymoo.operators.repair.rounding import RoundingRepair
 from pymoo.core.repair import Repair
 from pymoo.operators.crossover.sbx import SBX

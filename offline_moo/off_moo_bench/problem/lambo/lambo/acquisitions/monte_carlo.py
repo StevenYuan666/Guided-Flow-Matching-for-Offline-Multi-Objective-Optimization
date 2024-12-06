@@ -1,8 +1,9 @@
 import torch
 from botorch.acquisition.multi_objective.monte_carlo import (
-    qExpectedHypervolumeImprovement, qNoisyExpectedHypervolumeImprovement)
-from botorch.posteriors import (DeterministicPosterior, GPyTorchPosterior,
-                                Posterior)
+    qExpectedHypervolumeImprovement,
+    qNoisyExpectedHypervolumeImprovement,
+)
+from botorch.posteriors import DeterministicPosterior, GPyTorchPosterior, Posterior
 from gpytorch.distributions import MultitaskMultivariateNormal
 from gpytorch.lazy import BlockDiagLazyTensor
 from numpy import array, concatenate, copy

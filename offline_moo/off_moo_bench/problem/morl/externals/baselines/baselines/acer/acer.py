@@ -4,11 +4,19 @@ import time
 import numpy as np
 import tensorflow as tf
 from baselines import logger
-from baselines.a2c.utils import (EpisodeStats, Scheduler, avg_norm,
-                                 batch_to_seq, cat_entropy_softmax,
-                                 check_shape, find_trainable_variables,
-                                 get_by_index, gradient_add,
-                                 q_explained_variance, seq_to_batch)
+from baselines.a2c.utils import (
+    EpisodeStats,
+    Scheduler,
+    avg_norm,
+    batch_to_seq,
+    cat_entropy_softmax,
+    check_shape,
+    find_trainable_variables,
+    get_by_index,
+    gradient_add,
+    q_explained_variance,
+    seq_to_batch,
+)
 from baselines.acer.buffer import Buffer
 from baselines.acer.runner import Runner
 from baselines.common import set_global_seeds

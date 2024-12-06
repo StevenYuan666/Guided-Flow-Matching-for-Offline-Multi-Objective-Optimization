@@ -69,20 +69,22 @@ class MOBOSolver(Solver):
 
         from botorch.acquisition.multi_objective.monte_carlo import (
             qExpectedHypervolumeImprovement,
-            qNoisyExpectedHypervolumeImprovement)
+            qNoisyExpectedHypervolumeImprovement,
+        )
         from botorch.acquisition.objective import GenericMCObjective
         from botorch.models.gp_regression import FixedNoiseGP
         from botorch.models.model_list_gp_regression import ModelListGP
         from botorch.models.transforms.outcome import Standardize
         from botorch.optim.optimize import optimize_acqf, optimize_acqf_list
-        from botorch.utils.multi_objective.box_decompositions.non_dominated import \
-            FastNondominatedPartitioning
-        from botorch.utils.multi_objective.scalarization import \
-            get_chebyshev_scalarization
+        from botorch.utils.multi_objective.box_decompositions.non_dominated import (
+            FastNondominatedPartitioning,
+        )
+        from botorch.utils.multi_objective.scalarization import (
+            get_chebyshev_scalarization,
+        )
         from botorch.utils.sampling import draw_sobol_samples, sample_simplex
         from botorch.utils.transforms import normalize, unnormalize
-        from gpytorch.mlls.sum_marginal_log_likelihood import \
-            SumMarginalLogLikelihood
+        from gpytorch.mlls.sum_marginal_log_likelihood import SumMarginalLogLikelihood
 
         NOISE_SE = torch.tensor(
             [1e-6 for _ in range(botorch_problem.num_objectives)], **tkwargs
@@ -176,8 +178,9 @@ class MOBOSolver(Solver):
         from botorch import fit_gpytorch_mll
         from botorch.exceptions import BadInitialCandidatesWarning
         from botorch.sampling.normal import SobolQMCNormalSampler
-        from botorch.utils.multi_objective.box_decompositions.dominated import \
-            DominatedPartitioning
+        from botorch.utils.multi_objective.box_decompositions.dominated import (
+            DominatedPartitioning,
+        )
         from botorch.utils.multi_objective.pareto import is_non_dominated
 
         warnings.filterwarnings("ignore", category=BadInitialCandidatesWarning)

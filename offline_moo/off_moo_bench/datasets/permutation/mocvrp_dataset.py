@@ -1,5 +1,4 @@
-from offline_moo.off_moo_bench.datasets.permutation_dataset import \
-    PermutationDataset
+from offline_moo.off_moo_bench.datasets.permutation_dataset import PermutationDataset
 from offline_moo.off_moo_bench.disk_resource import DiskResource
 
 MOCVRPNames = [

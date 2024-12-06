@@ -1,5 +1,7 @@
 from offline_moo.off_moo_bench.problem.moo_molecule_funcs.properties import (
-    SUPPORTED_PROPERTIES, MOOMoleculeFunction)
+    SUPPORTED_PROPERTIES,
+    MOOMoleculeFunction,
+)
 
 f = MOOMoleculeFunction(list(SUPPORTED_PROPERTIES.keys()))
 

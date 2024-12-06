@@ -6,8 +6,12 @@ from Bio import PDB
 from Bio.SeqUtils import seq1
 from lambo.tasks.proxy_rfp.foldx import FoldxManager
 from lambo.tasks.proxy_rfp.sasa import SurfaceArea
-from lambo.utils import (FoldxMutation, StringDeletion, StringInsertion,
-                         StringSubstitution)
+from lambo.utils import (
+    FoldxMutation,
+    StringDeletion,
+    StringInsertion,
+    StringSubstitution,
+)
 
 
 def apply_mutation(base_seq, mut_pos, mut_res, tokenizer):

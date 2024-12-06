@@ -10,8 +10,7 @@ from baselines.a2c.utils import Scheduler, find_trainable_variables
 from baselines.acktr import kfac
 from baselines.common import explained_variance, set_global_seeds
 from baselines.common.policies import build_policy
-from baselines.common.tf_util import (get_session, load_variables,
-                                      save_variables)
+from baselines.common.tf_util import get_session, load_variables, save_variables
 from baselines.ppo2.ppo2 import safemean
 
 
