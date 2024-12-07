@@ -1,6 +1,6 @@
 # Guided-Flows-Matching-for-Offline-Multi-Objective-Optimization
 
-This repository contains the official implementation for the paper "ParetoFlow: Guided Flows in Multi-Objective Optimization". This repository is released for re-running the experiments in the paper.
+This repository contains the official implementation for the paper ["ParetoFlow: Guided Flows in Multi-Objective Optimization"](https://arxiv.org/abs/2412.03718). This repository is released for re-running the experiments in the paper.
 
 For any extension of this work, we provide a pip installable package [ParetoFlow](https://pypi.org/project/paretoflow/) (or check it on [GitHub](https://github.com/StevenYuan666/ParetoFlow)).
 
